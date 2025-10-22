@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(25, 21, 21, 0.9);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.calculator {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  width: 90%;
+  max-width: 380px;
+  transition: all 0.3s ease;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  padding: 20px;
+  margin: 10px 0 20px;
+  box-shadow: 0 3px 15px rgba(84, 84, 84, 0.1);
+  font-size: 2.2rem;
+  text-align: right;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+button {
+  flex: 1;
+  margin: 8px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.1),
+              5px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 65px;
+  max-width: 70px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.equalbtn {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+
+.operator {
+  color: #6dee0a;
+}
+
+.operator1 {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+}
+
+/* 🔹 Responsive Fixes */
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding-top: 40px; /* thoda space top se, center nahi */
+  }
+
+  .calculator {
+    padding: 15px;
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  input {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+
+  button {
+    height: 55px;
+    font-size: 1.2rem;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding-top: 20px;
+  }
+
+  input {
+    font-size: 1.5rem;
+  }
+
+  button {
+    height: 50px;
+    font-size: 1rem;
+    margin: 5px;
+  }
+}
